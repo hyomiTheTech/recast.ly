@@ -1,4 +1,5 @@
 import exampleVideoData from '../data/exampleVideoData.js';
+
 var VideoPlayer = (props) => (
   <div className="video-player">
     <div className="embed-responsive embed-responsive-16by9">
