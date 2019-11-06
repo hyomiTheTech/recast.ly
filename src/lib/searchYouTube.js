@@ -1,5 +1,14 @@
+
 var searchYouTube = (options, callback) => {
-  // TODO
+  $.ajax({
+    url: `https://www.youtube.com`,
+    type: 'GET',
+    data: {
+      query: "",
+      max: 5,
+      key:
+    }
+  })
 };
 
 export default searchYouTube;

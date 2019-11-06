@@ -1,7 +1,8 @@
 import exampleVideoData from '../data/exampleVideoData.js';
 import VideoList from './VideoList.js';
+
 var VideoListEntry = (props) => (
-  <div className="video-list-entry media">
+  <div className="video-list-entry media" onClick={() => { props.clickedVideo(props.video); }}>
     <div className="media-left media-middle">
       <img className="media-object" src={props.video.snippet.thumbnails.default.url} alt="" />
     </div>
