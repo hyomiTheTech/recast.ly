@@ -4,6 +4,7 @@ import VideoListEntry from './VideoListEntry.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
+import searchYouTube from '../lib/searchYouTube.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,6 +16,8 @@ class App extends React.Component {
     };
 
     this.clickedVideo = this.clickedVideo.bind(this);
+    this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
@@ -46,7 +49,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><Search handleSearchInputChange={this.getYouTubeVideos.bind(this)}/></div>
+            <div><Search handleSearchInputChange={this.getYouTubeVideos}/></div>
           </div>
         </nav>
         <div className="row">
