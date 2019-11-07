@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getYouTubeVideos('cute kittens');
+    this.getYouTubeVideos('Rick Astley');
   }
 
   getYouTubeVideos(query) {
